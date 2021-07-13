@@ -10,6 +10,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Deploy", "Deploy\Deploy.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Thunderdome", "Thunderdome\Thunderdome.csproj", "{5209F811-E8D2-4B59-A4D4-9BE9FCDD6004}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Installer", "Installer\Installer.vdproj", "{BFFBB5E5-B60A-4334-B17C-B4677249B978}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -24,6 +26,8 @@ Global
 		{5209F811-E8D2-4B59-A4D4-9BE9FCDD6004}.Debug|x64.Build.0 = Debug|x64
 		{5209F811-E8D2-4B59-A4D4-9BE9FCDD6004}.Release|x64.ActiveCfg = Release|x64
 		{5209F811-E8D2-4B59-A4D4-9BE9FCDD6004}.Release|x64.Build.0 = Release|x64
+		{BFFBB5E5-B60A-4334-B17C-B4677249B978}.Debug|x64.ActiveCfg = Debug
+		{BFFBB5E5-B60A-4334-B17C-B4677249B978}.Release|x64.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
