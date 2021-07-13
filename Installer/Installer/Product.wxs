@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+
+  <?define ProductName="Thunderdome 2021"?>
+  <?define ProductCode="*"?>
+  <?define UpgradeCode="072D77B7-706D-485C-8BEA-EB4D37CD47CE"?>
+  <?define Manufacturer="AMC Bridge LLC"?>
+  <?define HelpLink="http://amcbridge.com"?>
+  <?define SupportLink="http://amcbridge.com"?>
+  <?define UpdateInfoLink="http://amcbridge.com"?>
+
+  <?define BuildOutput="$(var.SolutionDir)Output\$(var.Platform)\$(var.Configuration)\"?>
+  <?define ThirdParty="$(var.SolutionDir)ThirdParty\"?>
+  <?define Res="$(var.ProjectDir)Resources\"?>
+  <?define Packages="$(var.SolutionDir)packages\"?>
+  
+  <!-- $(var.ProductVersion) is defined in .wixproj file-->
+  <Product Id="$(var.ProductCode)"
+           Name="$(var.ProductName)"
+           Language="1033"
+           Codepage="Windows-1252"
+           Version="$(var.ProductVersion)"
+           Manufacturer="$(var.Manufacturer)"
+           UpgradeCode="$(var.UpgradeCode)">
+
+    <Package InstallerVersion="400"
+             Compressed="yes"
+             SummaryCodepage="Windows-1252"
+             Languages="1033"
+             InstallScope="perMachine" />
+    
+    <Icon Id="app.ico" SourceFile="$(var.Res)\App.ico"/>
+    <Property Id="ARPPRODUCTICON" Value="app.ico" />
+    
+    <Property Id="ARPHELPLINK" Value="$(var.HelpLink)" />
+    <Property Id="ARPURLINFOABOUT" Value="$(var.SupportLink)"/>
+    <Property Id="ARPURLUPDATEINFO"  Value="$(var.UpdateInfoLink)" />
+
+    <MajorUpgrade Schedule="afterInstallInitialize" DowngradeErrorMessage="A later version of [ProductName] is already installed" AllowSameVersionUpgrades="yes" />
+
+    <Media Id="1" Cabinet="media.cab" EmbedCab="yes" /> 
+
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="InstallDirectory" Name="InstallDirectory">
+        <Directory Id="InstallDirectory.Executable" Name="Thunderdome">
+          <Directory Id="InstallDirectory.Language.de" Name="de">
+            <Component Id="Component.Thunderdome.Language.de" Guid="76BF8234-D273-4548-9ED4-6F8871F7577A">
+              <File Id="F18_Thunderdome.resources.dll_de" Name="Thunderdome.resources.dll" Source="$(var.BuildOutput)\de\" />
+              <RemoveFile Id="F18_Thunderdome.resources.dll_de" Name="Thunderdome.resources.dll" On="uninstall" Directory="InstallDirectory.Language.de" />
+            </Component>
+          </Directory>
+           
+          <Component Id="Component.Thunderdome.Executable" Guid="DE61AAFB-4C10-4F82-AB30-44A22504E30B">
+            <File Id="F18_Deploy.exe" Name="Deploy.exe" Source="$(var.BuildOutput)" />
+            <File Id="F18_Deploy.exe.config" Name="Deploy.exe.config" Source="$(var.BuildOutput)" />
+            <File Id="F18_Thunderdome.dll" Name="Thunderdome.dll" Source="$(var.BuildOutput)" />
+            <File Id="F18_Thunderdome.dll.config" Name="Thunderdome.dll.config" Source="$(var.BuildOutput)" />
+            <File Id="F18_Thunderdome.vcet.config" Name="Thunderdome.vcet.config" Source="$(var.BuildOutput)" />
+            <File Id="F18_Microsoft.Web.Services3.dll" Name="Microsoft.Web.Services3.dll" Source="$(var.ThirdParty)" />
+            <File Id="F18_ICSharpCode.SharpZipLib.dll" Name="ICSharpCode.SharpZipLib.dll" Source="$(var.ThirdParty)" />
+            <!--<File Id="F18_System.ValueTuple.dll" Name="System.ValueTuple.dll" Source="$(var.ThirdParty)" />-->
+
+
+            <RegistryValue Id="Thunderdome2018" KeyPath="yes" Action="write"
+                           Root="HKCU" Key="Software\[Manufacturer]\[ProductName]"
+                           Name="Addin" Type="string" Value="[InstallDirectory]"/>
+
+            <RemoveFile Id="RF18_Deploy.exe" Name="Deploy.exe" On="uninstall" Directory="InstallDirectory.Executable" />
+            <RemoveFile Id="RF18_Deploy.exe.config" Name="Deploy.exe" On="uninstall" Directory="InstallDirectory.Executable" />
+            <RemoveFile Id="RF18_Thunderdome.dll" Name="Thunderdome.dll" On="uninstall" Directory="InstallDirectory.Executable" />
+            <RemoveFile Id="RF18_Thunderdome.dll.config" Name="Thunderdome.dll" On="uninstall" Directory="InstallDirectory.Executable" />
+            <RemoveFile Id="RF18_Thunderdome.vcet.config" Name="Thunderdome.vcet.config" On="uninstall" Directory="InstallDirectory.Executable" />
+            <RemoveFile Id="RF18_Microsoft.Web.Services3.dll" Name="Microsoft.Web.Services3.dll" On="uninstall" Directory="InstallDirectory.Executable" />
+            <RemoveFile Id="RF18_ICSharpCode.SharpZipLib.dll" Name="ICSharpCode.SharpZipLib.dll" On="uninstall" Directory="InstallDirectory.Executable" />
+            <!--<RemoveFile Id="F18_System.ValueTuple.dll" Name="System.ValueTuple.dll" On="uninstall" Directory="InstallDirectory.Executable" />-->
+
+
+            <RemoveFolder Id="InstallDirectory.Executable" On="uninstall"/>
+          </Component>
+            
+
+
+        </Directory>
+      </Directory>
+    </Directory>
+
+    <Property Id="WIXUI_INSTALLDIR" Value="INSTALLDIR" />
+    <UIRef Id="WixUI_My" />
+
+    <Feature Id="Complete" Title="Complete" Absent="allow" Level="1" >
+      <ComponentRef Id="Component.Thunderdome.Executable" />
+      <ComponentRef Id="Component.Thunderdome.Language.de" />
+    </Feature>
+
+
+    <Binary Id="InitializeInstallDirectories" SourceFile="$(var.CustomActions.TargetDir)$(var.CustomActions.TargetName).CA.dll" />
+
+    <CustomAction Id="InitializeInstallDirectories" BinaryKey="InitializeInstallDirectories" DllEntry="InitializeInstallDirectories" Execute="immediate" />
+
+    <InstallExecuteSequence>
+      <Custom Action="InitializeInstallDirectories" Before="LaunchConditions"/>
+    </InstallExecuteSequence>
+
+    <InstallUISequence>
+      <Custom Action="InitializeInstallDirectories" Before="LaunchConditions"/>
+    </InstallUISequence>
+
+    <Condition Message="[ProductName] is available only for 64-bit platform.">
+      <![CDATA[(VersionNT64)]]>
+    </Condition>
+
+    <Condition Message="[ProductName] requires Autodesk Vault installation.">
+      <![CDATA[VAULT_INSTALLED="1"]]>
+    </Condition>
+
+    <Condition Message="A newer version of [ProductName] is already installed.">
+      <![CDATA[NOT NEWERVERSIONDETECTED OR Installed]]>
+    </Condition>
+
+  </Product>
+</Wix>
