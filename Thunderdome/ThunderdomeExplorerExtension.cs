@@ -78,7 +78,7 @@ namespace Thunderdome
             {
                 Description = ExtensionRes.ThunderdomeExplorerExtension_CommandSites_BackupCommand,
                 Hint = ExtensionRes.ThunderdomeExplorerExtension_CommandSites_BackupCommand,
-                Image = ExtensionRes.MenuItem,
+                Image = ExtensionRes._000275_computer_save,
                 ToolbarPaintStyle = PaintStyle.TextAndGlyph
             };
             backupCmd.Execute += BackupCmd_Execute;
@@ -88,7 +88,7 @@ namespace Thunderdome
             {
                 Description = ExtensionRes.ThunderdomeExplorerExtension_CommandSites_ConfigureationCommandDescription,
                 Hint = ExtensionRes.ThunderdomeExplorerExtension_ConfigureationCommand,
-                Image = ExtensionRes.MenuItem,
+                Image = ExtensionRes._000276_computer_settings,
                 ToolbarPaintStyle = PaintStyle.TextAndGlyph
             };
             configCmd.Execute += ConfigCmd_Execute;
@@ -98,7 +98,7 @@ namespace Thunderdome
             {
                 Description = ExtensionRes.ThunderdomeExplorerExtension_CommandSites_DeployCommandDescription,
                 Hint = ExtensionRes.ThunderdomeExplorerExtension_DeployCommand,
-                Image = ExtensionRes.MenuItem,
+                Image = ExtensionRes._000260_computer_export,
                 ToolbarPaintStyle = PaintStyle.TextAndGlyph
             };
             deployCmd.Execute += DeployCmd_Execute;

@@ -19,7 +19,7 @@ namespace Thunderdome {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class ExtensionRes {
@@ -57,6 +57,66 @@ namespace Thunderdome {
             }
             set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _000210_computer_add {
+            get {
+                object obj = ResourceManager.GetObject("_000210_computer_add", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _000260_computer_export {
+            get {
+                object obj = ResourceManager.GetObject("_000260_computer_export", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _000275_computer_save {
+            get {
+                object obj = ResourceManager.GetObject("_000275_computer_save", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _000276_computer_settings {
+            get {
+                object obj = ResourceManager.GetObject("_000276_computer_settings", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _000410_folder_add {
+            get {
+                object obj = ResourceManager.GetObject("_000410_folder_add", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _000440_folder_search {
+            get {
+                object obj = ResourceManager.GetObject("_000440_folder_search", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -259,16 +319,6 @@ namespace Thunderdome {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap MenuItem {
-            get {
-                object obj = ResourceManager.GetObject("MenuItem", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Unable to configure file moving operations.
         /// </summary>
         internal static string MoveOperationsExceptionMessage {
@@ -377,7 +427,7 @@ namespace Thunderdome {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Create Deployment.
+        ///   Looks up a localized string similar to Manage Deployments....
         /// </summary>
         internal static string ThunderdomeExplorerExtension_ConfigureationCommand {
             get {

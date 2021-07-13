@@ -211,7 +211,7 @@
     <value>Selektieren einer Verteilung für diesen PC</value>
   </data>
   <data name="ThunderdomeExplorerExtension_ConfigureationCommand" xml:space="preserve">
-    <value>Verteilungs-Paket erstellen</value>
+    <value>Deployments verwalten...</value>
   </data>
   <data name="ThunderdomeExplorerExtension_ConfigureThunderdome_DeploymentCreated" xml:space="preserve">
     <value>Verteilung wurde erstellt</value>

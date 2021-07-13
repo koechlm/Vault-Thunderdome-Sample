@@ -117,10 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="MenuItem" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>resources\menuitem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="ThunderdomeExplorerExtension_CommandSites_BackupCommand" xml:space="preserve">
     <value>Backup your Vault settings</value>
   </data>
@@ -128,7 +124,7 @@
     <value>Decide which components to push to Vault users</value>
   </data>
   <data name="ThunderdomeExplorerExtension_ConfigureationCommand" xml:space="preserve">
-    <value>Create Deployment</value>
+    <value>Manage Deployments...</value>
   </data>
   <data name="ThunderdomeExplorerExtension_OnLogOn_ThunderdomeCouldNotUpdate" xml:space="preserve">
     <value>Thunderdome could not successfully execute configuration update.</value>
@@ -290,5 +286,24 @@ The Vault Client will restart when the update is complete.</value>
   </data>
   <data name="DataStandardController_HelpFiles" xml:space="preserve">
     <value>HelpFiles</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="_000210_computer_add" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\000210-computer-add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_000260_computer_export" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\000260-computer-export.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_000275_computer_save" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\000275-computer-save.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_000276_computer_settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\000276-computer-settings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_000410_folder_add" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\000410-folder-add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_000440_folder_search" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\000440-folder-search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

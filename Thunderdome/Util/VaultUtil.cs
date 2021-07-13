@@ -19,7 +19,7 @@ namespace Thunderdome.Util
     /// </summary>
     public static class VaultUtil
     {
-        private const int AdminConfigRoleId = 22;
+        private const int ConfigAdminRoleId = 22; //Configuration Administrator Role
 
         /// <summary>
         /// Tells if the logged in user is an admin or not.
@@ -30,10 +30,10 @@ namespace Thunderdome.Util
             long userId = conn.WebServiceManager.SecurityService.Session.User.Id;
             if (userId > 0)
             {
-                AWS.Permis[] adminConfigPermis;
+                AWS.Permis[] ConfigAdminPermis;
                 try
                 {
-                    adminConfigPermis = conn.WebServiceManager.AdminService.GetPermissionsByRoleId(AdminConfigRoleId);
+                    ConfigAdminPermis = conn.WebServiceManager.AdminService.GetPermissionsByRoleId(ConfigAdminRoleId);
                 }
                 catch (System.Exception ex)
                 {
@@ -48,7 +48,7 @@ namespace Thunderdome.Util
                 AWS.Permis[] permissions = conn.WebServiceManager.AdminService.GetPermissionsByUserId(userId);
 
                 //Check if the user has the the Admin Config Role
-                foreach (AWS.Permis perm in adminConfigPermis)
+                foreach (AWS.Permis perm in ConfigAdminPermis)
                 {
                     if (permissions.FirstOrDefault(p => p.Id == perm.Id) == null)
                     {

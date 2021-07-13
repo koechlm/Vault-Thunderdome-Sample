@@ -54,6 +54,7 @@
             // _allUsersButton
             // 
             resources.ApplyResources(this._allUsersButton, "_allUsersButton");
+            this._allUsersButton.Image = global::Thunderdome.ExtensionRes._000440_folder_search;
             this._allUsersButton.Name = "_allUsersButton";
             this._allUsersButton.UseVisualStyleBackColor = true;
             this._allUsersButton.Click += new System.EventHandler(this.AllUsersButton_Click);
@@ -61,6 +62,10 @@
             // _deployFolderTextBox
             // 
             resources.ApplyResources(this._deployFolderTextBox, "_deployFolderTextBox");
+            this._deployFolderTextBox.AutoCompleteCustomSource.AddRange(new string[] {
+            resources.GetString("_deployFolderTextBox.AutoCompleteCustomSource")});
+            this._deployFolderTextBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this._deployFolderTextBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this._deployFolderTextBox.Name = "_deployFolderTextBox";
             // 
             // label2
@@ -84,6 +89,7 @@
             // 
             // label3
             // 
+            this.tableLayoutPanel1.SetColumnSpan(this.label3, 2);
             resources.ApplyResources(this.label3, "label3");
             this.label3.Name = "label3";
             // 
@@ -104,10 +110,10 @@
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this._deploymentNameTextBox, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label3, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this._addFolderButton, 2, 4);
             this.tableLayoutPanel1.Controls.Add(this._createButton, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.panel1, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label3, 0, 3);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             // 
             // tableLayoutPanel2
@@ -136,6 +142,7 @@
             // 
             // _addFolderButton
             // 
+            this._addFolderButton.Image = global::Thunderdome.ExtensionRes._000410_folder_add;
             resources.ApplyResources(this._addFolderButton, "_addFolderButton");
             this._addFolderButton.Name = "_addFolderButton";
             this._addFolderButton.UseVisualStyleBackColor = true;
@@ -144,15 +151,16 @@
             // _createButton
             // 
             resources.ApplyResources(this._createButton, "_createButton");
+            this._createButton.Image = global::Thunderdome.ExtensionRes._000210_computer_add;
             this._createButton.Name = "_createButton";
             this._createButton.UseVisualStyleBackColor = true;
             this._createButton.Click += new System.EventHandler(this.CreateButton_Click);
             // 
             // panel1
             // 
-            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Controls.Add(this._deploymentTypeComboBox);
             this.panel1.Controls.Add(this._forceDeploymentCheckBox);
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
             // _deploymentTypeComboBox

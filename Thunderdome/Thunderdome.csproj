@@ -60,8 +60,7 @@
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>
-    </ApplicationIcon>
+    <ApplicationIcon>Resources\App.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <Win32Resource>
@@ -129,6 +128,11 @@
     <Compile Include="DeploymentController\VaultFoldersController.cs" />
     <Compile Include="DoubleClickCheckFixTreeView.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtensionRes.de.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ExtensionRes.de.resx</DependentUpon>
     </Compile>
     <Compile Include="Model\DeploymentContainer.cs" />
     <Compile Include="DeploymentController\DeploymentContainerException.cs" />
@@ -215,7 +219,10 @@
       <DependentUpon>Deploy.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="ExtensionRes.de.resx" />
+    <EmbeddedResource Include="ExtensionRes.de.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ExtensionRes.de.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="ExtensionRes.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>ExtensionRes.Designer.cs</LastGenOutput>
@@ -268,8 +275,21 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\App.ico" />
+    <Content Include="LICENSE.TXT">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\000210-computer-add.png" />
+    <None Include="Resources\000260-computer-export.png" />
+    <None Include="Resources\000275-computer-save.png" />
+    <None Include="Resources\000276-computer-settings.png" />
+    <None Include="Resources\000410-folder-add.png" />
+    <None Include="Resources\000440-folder-search.png" />
     <Content Include="Resources\MenuItem.png" />
+    <Content Include="Resources\App.ico" />
+    <None Include="Resources\mnuCreateDeployment.png" />
+    <Content Include="THIRD-PARTY-NOTICES.TXT">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
