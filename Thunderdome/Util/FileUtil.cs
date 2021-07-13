@@ -11,7 +11,7 @@ namespace Thunderdome.Util
     /// </summary>
     internal static class FileUtil
     {
-        private static readonly string NameOfFolder = "Thunderdome2021";
+        private static readonly string NameOfFolder = "Thunderdome 2022";
 
         /// <summary>
         /// Returns path to assembly CodeBase folder
