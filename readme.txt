@@ -55,12 +55,11 @@ Thunderdome is open source. You are expected to build your individual applicatio
 
 RELEASE NOTES:
 ---------------------------------
-2022.0.0 - Next Generation of Thunderdome:
-Autodesk Consulting contributed many customer project driven enhancements, like Client language support de-XX, managing multiple deployments and user defined addition of folders to be deployed to Vault Workspace locations or any other target. This version is available as open source and installable sample application.
+2022.0.0 - Next Generation of Thunderdome: the original sample merged Autodesk Consulting driven enhancements, like Client language support de-XX, managing multiple deployments and user defined addition of folders to be deployed to Vault Workspace locations or any other target. This version is available as open source and installable sample application.
 
 For 2020 and older releases review the readme: https://github.com/koechlm/Vault-Thunderdome.
 
-Project Thunderdome 2019, 2020, 2021 sample applications had been published by AMC Bridge LCC on Autodesk App Store.
+Project Thunderdome 2019, 2020, 2021 sample applications had been published by AMC Bridge LCC on Autodesk App Store. Note - These samples are based on Autodesk sources but added individual enhancements that are not part of the fork of this repository.
 
 
 Sincerely,
