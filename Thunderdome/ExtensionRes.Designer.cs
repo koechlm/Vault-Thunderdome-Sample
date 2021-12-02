@@ -346,6 +346,15 @@ namespace Thunderdome {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Search Groups.
+        /// </summary>
+        internal static string SavedSearchesController_SavedSearchesGroups {
+            get {
+                return ResourceManager.GetString("SavedSearchesController_SavedSearchesGroups", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Backup Vault User Settings.
         /// </summary>
         internal static string ThunderdomeExplorerExtension_Backup_BackupVaultUserSettings {
@@ -526,7 +535,7 @@ namespace Thunderdome {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Deploy.
+        ///   Looks up a localized string similar to Deploy....
         /// </summary>
         internal static string ThunderdomeExplorerExtension_DeployCommand {
             get {

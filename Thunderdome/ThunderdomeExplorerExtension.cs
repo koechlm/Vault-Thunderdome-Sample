@@ -84,16 +84,6 @@ namespace Thunderdome
             backupCmd.Execute += BackupCmd_Execute;
             site.AddCommand(backupCmd);
 
-            CommandItem configCmd = new CommandItem(ThunderdomeConfigCommandId, ExtensionRes.ThunderdomeExplorerExtension_ConfigureationCommand)
-            {
-                Description = ExtensionRes.ThunderdomeExplorerExtension_CommandSites_ConfigureationCommandDescription,
-                Hint = ExtensionRes.ThunderdomeExplorerExtension_ConfigureationCommand,
-                Image = ExtensionRes._000276_computer_settings,
-                ToolbarPaintStyle = PaintStyle.TextAndGlyph
-            };
-            configCmd.Execute += ConfigCmd_Execute;
-            site.AddCommand(configCmd);
-
             CommandItem deployCmd = new CommandItem(ThunderdomeDeployCommandId, ExtensionRes.ThunderdomeExplorerExtension_DeployCommand)
             {
                 Description = ExtensionRes.ThunderdomeExplorerExtension_CommandSites_DeployCommandDescription,
@@ -103,6 +93,16 @@ namespace Thunderdome
             };
             deployCmd.Execute += DeployCmd_Execute;
             site.AddCommand(deployCmd);
+
+            CommandItem configCmd = new CommandItem(ThunderdomeConfigCommandId, ExtensionRes.ThunderdomeExplorerExtension_ConfigureationCommand)
+            {
+                Description = ExtensionRes.ThunderdomeExplorerExtension_CommandSites_ConfigureationCommandDescription,
+                Hint = ExtensionRes.ThunderdomeExplorerExtension_ConfigureationCommand,
+                Image = ExtensionRes._000276_computer_settings,
+                ToolbarPaintStyle = PaintStyle.TextAndGlyph
+            };
+            configCmd.Execute += ConfigCmd_Execute;
+            site.AddCommand(configCmd);
 
             return new CommandSite[] { site };
         }
@@ -535,7 +535,7 @@ namespace Thunderdome
 
             DeploymentSet initialDeploymentModel = LoadSavedDeployments(conn);
 
-            Configure cfgDialog = new Configure();
+            ManageDeployments cfgDialog = new ManageDeployments();
             if (await cfgDialog.ShowDialog(initialDeploymentModel, vaultName, conn) != DialogResult.OK)
             {
                 VaultFoldersController.CleanUpTmpRootFolder();

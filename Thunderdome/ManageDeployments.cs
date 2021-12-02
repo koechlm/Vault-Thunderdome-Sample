@@ -17,7 +17,7 @@ namespace Thunderdome
     /// <summary>
     /// Deployment configuration form
     /// </summary>
-    public partial class Configure : Form
+    public partial class ManageDeployments : Form
     {
         private Connection _conn;
         private bool _isInitializing;
@@ -52,7 +52,7 @@ namespace Thunderdome
         /// <param name="deployments">Selected configuration items to be deployed</param>
         /// <param name="vaultName">Vault name to deploy package</param>
         /// <param name="conn">Vault connection</param>
-        public Configure()
+        public ManageDeployments()
         {
 
             InitializeComponent();

@@ -55,6 +55,8 @@ Thunderdome is open source. You are expected to build your individual applicatio
 
 RELEASE NOTES:
 ---------------------------------
+2022.1: Support for Saved Searches Groups added; Minor updates on the Tools->Thunderdome Pullout-Menu
+
 2022.0.0 - Next Generation of Thunderdome:
 Autodesk Consulting contributed many customer project driven enhancements, like Client language support de-XX, managing multiple deployments and user defined addition of folders to be deployed to Vault Workspace locations or any other target. This version is available as open source and installable sample application.
 

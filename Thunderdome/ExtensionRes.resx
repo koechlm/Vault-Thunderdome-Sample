@@ -246,7 +246,7 @@ The Vault Client will restart when the update is complete.</value>
     <value>Unable to apply the deployment:  {0}</value>
   </data>
   <data name="ThunderdomeExplorerExtension_DeployCommand" xml:space="preserve">
-    <value>Deploy</value>
+    <value>Deploy...</value>
   </data>
   <data name="ThunderdomeExplorerExtension_ConfigureThunderdome_DeploymentNameUsed" xml:space="preserve">
     <value>The name '{0}' is already used.</value>
@@ -305,5 +305,8 @@ The Vault Client will restart when the update is complete.</value>
   </data>
   <data name="_000440_folder_search" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\000440-folder-search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SavedSearchesController_SavedSearchesGroups" xml:space="preserve">
+    <value>Search Groups</value>
   </data>
 </root>

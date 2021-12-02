@@ -241,7 +241,7 @@
     <value>Verteilung konnte nicht installiert werden:  {0}</value>
   </data>
   <data name="ThunderdomeExplorerExtension_DeployCommand" xml:space="preserve">
-    <value>Verteilung</value>
+    <value>Verteilung...</value>
   </data>
   <data name="ThunderdomeExplorerExtension_DisplayResultMessage_ExitRequired" xml:space="preserve">
     <value>Vault Client beenden!</value>
@@ -286,5 +286,8 @@ Der Vault Client wird nach der Aktualisierung automatisch gestartet.</value>
   </data>
   <data name="DataStandardController_HelpFiles" xml:space="preserve">
     <value>HelpFiles</value>
+  </data>
+  <data name="SavedSearchesController_SavedSearchesGroups" xml:space="preserve">
+    <value>Suchgruppen</value>
   </data>
 </root>

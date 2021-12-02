@@ -1,6 +1,6 @@
 ﻿namespace Thunderdome
 {
-    partial class Configure
+    partial class ManageDeployments
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Configure));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManageDeployments));
             this._allUsersButton = new System.Windows.Forms.Button();
             this._deployFolderTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();

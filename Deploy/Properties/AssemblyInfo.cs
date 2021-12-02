@@ -1,7 +1,7 @@
 ﻿using System.Reflection;
 using System.Runtime.InteropServices;
 
-[assembly: AssemblyTitle("Thunderdome Deploy 2022")]
+[assembly: AssemblyTitle("Thunderdome Deploy 2022.1")]
 [assembly: AssemblyDescription("Deploy managed user settings and extensions")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Autodesk")]
@@ -17,5 +17,5 @@ using System.Runtime.InteropServices;
 // The following GUID is for the ID of the typelib if this project is exposed to COM
 [assembly: Guid("C716965C-8440-4490-A9D8-1A4C2C35D056")]
 
-[assembly: AssemblyVersion("27.0.0.1")]
-[assembly: AssemblyFileVersion("27.0.0.1")]
+[assembly: AssemblyVersion("2022.27.1.0")]
+[assembly: AssemblyFileVersion("2022.27.1.0")]

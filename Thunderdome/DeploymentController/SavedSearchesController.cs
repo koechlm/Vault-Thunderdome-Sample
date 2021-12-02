@@ -10,6 +10,7 @@ namespace Thunderdome.DeploymentController
     public class SavedSearchesController : DeploymentContainerController
     {
         private const string FolderSearches = "Searches";
+        private const string SearchesGroups = "Groups";
 
         public SavedSearchesController(Connection connection, string vaultName)
             : base(connection, vaultName, "Autodesk.SavedSearch")
@@ -23,11 +24,24 @@ namespace Thunderdome.DeploymentController
                 string serverName = AutodeskPathUtil.GetServerSettingsFolderName(Connection);
                 string localSettingFolder = AutodeskPathUtil.GetCurrentVaultCommonFolder(Connection, serverName, VaultName);
                 string searchesPath = Path.Combine(localSettingFolder, FolderSearches);
+                //Vault 2022 (2021.2) added grouping of searches; the groups/searches are stored in the .\Groups\Groups.xml file
+                //add the groups as first item in the tree
+                string grpname = string.Format(ExtensionRes.SavedSearchesController_SavedSearchesGroups);
+                foreach (string folder in DirectoryUtil.GetDirectoriesOrEmpty(searchesPath))
+                {
+                    string folderName = Path.GetFileName(folder);
+                    if (folderName.Equals(SearchesGroups, StringComparison.InvariantCultureIgnoreCase))
+                    {
+                        container.DeploymentItems.Add(new DeploymentFolder(folder, ExtensionRes.SavedSearchesController_SavedSearchesGroups));
+                    }
+                }
+                //add the saved searches
                 foreach (string searchPath in DirectoryUtil.GetFilesOrEmpty(searchesPath))
                 {
                     string name = string.Format(ExtensionRes.SavedSearchesController_SavedSearch_0, Path.GetFileName(searchPath));
                     container.DeploymentItems.Add(new DeploymentFile(searchPath, name));
                 }
+
                 return container;
             }
             catch
