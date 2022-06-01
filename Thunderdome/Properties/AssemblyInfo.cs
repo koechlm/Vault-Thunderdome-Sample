@@ -2,12 +2,12 @@
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-[assembly: AssemblyTitle("Thunderdome 2022.1")]
+[assembly: AssemblyTitle("Thunderdome 2023")]
 [assembly: AssemblyDescription("Manage and deploy user settings and extensions")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Autodesk")]
-[assembly: AssemblyProduct("Thunderdome Sample 2022")]
-[assembly: AssemblyCopyright("Copyright © 2022, Autodesk")]
+[assembly: AssemblyProduct("Thunderdome Sample 2023")]
+[assembly: AssemblyCopyright("Copyright © 2023, Autodesk")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -19,5 +19,5 @@ using System.Runtime.InteropServices;
 // The following GUID is for the ID of the typelib if this project is exposed to COM
 [assembly: Guid("129EBB30-24B6-4635-AE20-46BF10EF3B12")]
 
-[assembly: AssemblyVersion("2022.27.1.0")]
-[assembly: AssemblyFileVersion("2022.27.1.0")]
+[assembly: AssemblyVersion("2023.28.0.0")]
+[assembly: AssemblyFileVersion("2023.28.0.0")]

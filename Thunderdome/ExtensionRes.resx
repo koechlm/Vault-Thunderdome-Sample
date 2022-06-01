@@ -309,4 +309,16 @@ The Vault Client will restart when the update is complete.</value>
   <data name="SavedSearchesController_SavedSearchesGroups" xml:space="preserve">
     <value>Search Groups</value>
   </data>
+  <data name="RESTRICTION" xml:space="preserve">
+    <value>Restriction</value>
+  </data>
+  <data name="RESTRICTION_OBJECT" xml:space="preserve">
+    <value>Object</value>
+  </data>
+  <data name="RESTRICTION_REASON" xml:space="preserve">
+    <value>Restriction Reason</value>
+  </data>
+  <data name="ThunderdomExplorerExtension_AccessDenied" xml:space="preserve">
+    <value>Access denied</value>
+  </data>
 </root>

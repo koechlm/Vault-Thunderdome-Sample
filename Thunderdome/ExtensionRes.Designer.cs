@@ -328,6 +328,33 @@ namespace Thunderdome {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Restriction.
+        /// </summary>
+        internal static string RESTRICTION {
+            get {
+                return ResourceManager.GetString("RESTRICTION", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Object.
+        /// </summary>
+        internal static string RESTRICTION_OBJECT {
+            get {
+                return ResourceManager.GetString("RESTRICTION_OBJECT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Restriction Reason.
+        /// </summary>
+        internal static string RESTRICTION_REASON {
+            get {
+                return ResourceManager.GetString("RESTRICTION_REASON", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Saved Search: {0}.
         /// </summary>
         internal static string SavedSearchesController_SavedSearch_0 {
@@ -624,6 +651,15 @@ namespace Thunderdome {
         internal static string ThunderdomeExplorerExtension_PopUpCustomDeploymentUpdatesAvailable {
             get {
                 return ResourceManager.GetString("ThunderdomeExplorerExtension_PopUpCustomDeploymentUpdatesAvailable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Access denied.
+        /// </summary>
+        internal static string ThunderdomExplorerExtension_AccessDenied {
+            get {
+                return ResourceManager.GetString("ThunderdomExplorerExtension_AccessDenied", resourceCulture);
             }
         }
         

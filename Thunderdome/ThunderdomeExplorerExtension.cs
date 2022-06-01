@@ -1,10 +1,12 @@
 ﻿using Autodesk.Connectivity.Explorer.Extensibility;
 using Autodesk.Connectivity.Extensibility.Framework;
+using Autodesk.DataManagement.Client.Framework;
 using Autodesk.DataManagement.Client.Framework.Currency;
 using Autodesk.DataManagement.Client.Framework.Vault.Currency.Connections;
 using Autodesk.DataManagement.Client.Framework.Vault.Currency.Entities;
 using Autodesk.DataManagement.Client.Framework.Vault.Results;
 using Autodesk.DataManagement.Client.Framework.Vault.Settings;
+using Autodesk.DataManagement.Client.Framework.Forms;
 using ICSharpCode.SharpZipLib.Zip;
 using System;
 using System.Collections.Generic;
@@ -21,7 +23,7 @@ using Thunderdome.Model;
 using Thunderdome.Util;
 using File = Autodesk.Connectivity.WebServices.File;
 
-[assembly: ApiVersion("15.0")]
+[assembly: ApiVersion("16.0")]
 [assembly: ExtensionId("2AAE56F1-3E44-4B69-8AF0-15566D7A2E49")]
 
 namespace Thunderdome
@@ -529,7 +531,16 @@ namespace Thunderdome
             string serverName = conn.Server;
             if (!VaultUtil.IsAdmin(conn))
             {
-                ShowErrorMessage(ExtensionRes.ThunderdomeExplorerExtension_ConfigureThunderdome_OnlyAdminCanUseThisFunction);
+                Autodesk.DataManagement.Client.Framework.Currency.Restriction mAdminRestriction = new Autodesk.DataManagement.Client.Framework.Currency.Restriction(ExtensionRes.ThunderdomeExplorerExtension_ConfigureationCommand, ExtensionRes.ThunderdomExplorerExtension_AccessDenied, ExtensionRes.ThunderdomeExplorerExtension_ConfigureThunderdome_OnlyAdminCanUseThisFunction, false);
+                Autodesk.DataManagement.Client.Framework.Forms.Settings.ShowRestrictionsSettings showRestrictionsSettings = new Autodesk.DataManagement.Client.Framework.Forms.Settings.ShowRestrictionsSettings(ExtensionRes.ThunderdomeExplorerExtension_ConfigureationCommand, Autodesk.DataManagement.Client.Framework.Forms.Settings.ShowRestrictionsSettings.IconType.Error);
+                showRestrictionsSettings.AddRestriction(mAdminRestriction);
+                showRestrictionsSettings.ShowDetailsArea = true;
+                showRestrictionsSettings.RestrictionColumnCaption = ExtensionRes.RESTRICTION;
+                showRestrictionsSettings.RestrictedObjectNameColumnCaption = ExtensionRes.RESTRICTION_OBJECT;
+                showRestrictionsSettings.ReasonColumnCaption = ExtensionRes.RESTRICTION_REASON;
+
+                DialogResult result = Autodesk.DataManagement.Client.Framework.Forms.Library.ShowRestrictions(showRestrictionsSettings);
+                //ShowErrorMessage(ExtensionRes.ThunderdomeExplorerExtension_ConfigureThunderdome_OnlyAdminCanUseThisFunction);
                 return;
             }
 
