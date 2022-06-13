@@ -12,8 +12,8 @@ namespace Thunderdome.Util
     {
         //private const string CommonFolder1 = "Services_Security_1_6_2017";
         //private const string CommonFolder2 = "Services_Security_6_29_2011";
-        private const string VaultProFolderName = "Autodesk Vault Professional 2022";
-        private const string VaultWgFolderName = "Autodesk Vault Workgroup 2022";
+        private const string VaultProFolderName = "Autodesk Vault Professional 2023";
+        private const string VaultWgFolderName = "Autodesk Vault Workgroup 2023";
 
         /// <summary>
         /// Returns path to VaultCommon folder

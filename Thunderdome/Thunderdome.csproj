@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Thunderdome</RootNamespace>
     <AssemblyName>Thunderdome</AssemblyName>
-    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
@@ -69,31 +69,35 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Autodesk.Connectivity.Explorer.Extensibility">
-      <HintPath>..\..\..\..\OneDrive - Autodesk\Vault Customization\SDK References 2022\Autodesk Vault 2022 SDK\bin\x64\Autodesk.Connectivity.Explorer.Extensibility.dll</HintPath>
+      <HintPath>..\..\..\..\OneDrive - Autodesk\Vault Customization\SDK References 2023\Autodesk Vault 2023 SDK\bin\x64\Autodesk.Connectivity.Explorer.Extensibility.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Autodesk.Connectivity.Explorer.ExtensibilityTools">
-      <HintPath>..\..\..\..\OneDrive - Autodesk\Vault Customization\SDK References 2022\Autodesk Vault 2022 SDK\bin\x64\Autodesk.Connectivity.Explorer.ExtensibilityTools.dll</HintPath>
+      <HintPath>..\..\..\..\OneDrive - Autodesk\Vault Customization\SDK References 2023\Autodesk Vault 2023 SDK\bin\x64\Autodesk.Connectivity.Explorer.ExtensibilityTools.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Autodesk.Connectivity.Extensibility.Framework">
-      <HintPath>..\..\..\..\OneDrive - Autodesk\Vault Customization\SDK References 2022\Autodesk Vault 2022 SDK\bin\x64\Autodesk.Connectivity.Extensibility.Framework.dll</HintPath>
+      <HintPath>..\..\..\..\OneDrive - Autodesk\Vault Customization\SDK References 2023\Autodesk Vault 2023 SDK\bin\x64\Autodesk.Connectivity.Extensibility.Framework.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Autodesk.Connectivity.JobProcessor.Extensibility">
-      <HintPath>..\..\..\..\OneDrive - Autodesk\Vault Customization\SDK References 2022\Autodesk Vault 2022 SDK\bin\x64\Autodesk.Connectivity.JobProcessor.Extensibility.dll</HintPath>
+      <HintPath>..\..\..\..\OneDrive - Autodesk\Vault Customization\SDK References 2023\Autodesk Vault 2023 SDK\bin\x64\Autodesk.Connectivity.JobProcessor.Extensibility.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Autodesk.Connectivity.WebServices">
-      <HintPath>..\..\..\..\OneDrive - Autodesk\Vault Customization\SDK References 2022\Autodesk Vault 2022 SDK\bin\x64\Autodesk.Connectivity.WebServices.dll</HintPath>
+      <HintPath>..\..\..\..\OneDrive - Autodesk\Vault Customization\SDK References 2023\Autodesk Vault 2023 SDK\bin\x64\Autodesk.Connectivity.WebServices.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Autodesk.DataManagement.Client.Framework">
-      <HintPath>..\..\..\..\OneDrive - Autodesk\Vault Customization\SDK References 2022\Autodesk Vault 2022 SDK\bin\x64\Autodesk.DataManagement.Client.Framework.dll</HintPath>
+      <HintPath>..\..\..\..\OneDrive - Autodesk\Vault Customization\SDK References 2023\Autodesk Vault 2023 SDK\bin\x64\Autodesk.DataManagement.Client.Framework.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Autodesk.DataManagement.Client.Framework.Forms">
+      <HintPath>..\..\..\..\OneDrive - Autodesk\Vault Customization\SDK References 2023\Autodesk Vault 2023 SDK\bin\x64\Autodesk.DataManagement.Client.Framework.Forms.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Autodesk.DataManagement.Client.Framework.Vault">
-      <HintPath>..\..\..\..\OneDrive - Autodesk\Vault Customization\SDK References 2022\Autodesk Vault 2022 SDK\bin\x64\Autodesk.DataManagement.Client.Framework.Vault.dll</HintPath>
+      <HintPath>..\..\..\..\OneDrive - Autodesk\Vault Customization\SDK References 2023\Autodesk Vault 2023 SDK\bin\x64\Autodesk.DataManagement.Client.Framework.Vault.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="ICSharpCode.SharpZipLib, Version=0.85.4.369, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
@@ -106,6 +110,11 @@
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
     <Reference Include="System.Drawing" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq">
@@ -260,7 +269,7 @@
     <None Include="packages.config" />
     <None Include="Thunderdome.snk" />
     <None Include="Thunderdome.vcet.config">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>

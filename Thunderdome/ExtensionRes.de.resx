@@ -290,4 +290,16 @@ Der Vault Client wird nach der Aktualisierung automatisch gestartet.</value>
   <data name="SavedSearchesController_SavedSearchesGroups" xml:space="preserve">
     <value>Suchgruppen</value>
   </data>
+  <data name="RESTRICTION" xml:space="preserve">
+    <value>Restriktion</value>
+  </data>
+  <data name="RESTRICTION_OBJECT" xml:space="preserve">
+    <value>Objekt</value>
+  </data>
+  <data name="RESTRICTION_REASON" xml:space="preserve">
+    <value>Restriktionsgrund</value>
+  </data>
+  <data name="ThunderdomExplorerExtension_AccessDenied" xml:space="preserve">
+    <value>Zugriff verweigert</value>
+  </data>
 </root>
