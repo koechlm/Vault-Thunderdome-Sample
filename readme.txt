@@ -8,7 +8,7 @@ This project is published as open source; a sample application installer can be 
 
 REQUIREMENTS:
 ---------------------------------
-- Vault Workgroup/Professional 2022
+- Vault Workgroup/Professional 2022 or newer
 
 
 TO CREATE and MANAGE DEPLOYMENTS (ADMIN):
