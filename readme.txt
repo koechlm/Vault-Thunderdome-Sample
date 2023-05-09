@@ -55,6 +55,7 @@ Thunderdome is open source. You are expected to build your individual applicatio
 
 RELEASE NOTES:
 ---------------------------------
+2024.0.0: updated for 2024 compatibility
 2023.0: updated for 2023
 2022.1: Support for Saved Searches Groups added; Minor updates on the Tools->Thunderdome Pullout-Menu
 
@@ -62,8 +63,6 @@ RELEASE NOTES:
 Autodesk Consulting contributed many customer project driven enhancements, like Client language support de-XX, managing multiple deployments and user defined addition of folders to be deployed to Vault Workspace locations or any other target. This version is available as open source and installable sample application.
 
 For 2020 and older releases review the readme: https://github.com/koechlm/Vault-Thunderdome.
-
-Project Thunderdome 2019, 2020, 2021 sample applications had been published by AMC Bridge LCC on Autodesk App Store.
 
 
 Sincerely,
