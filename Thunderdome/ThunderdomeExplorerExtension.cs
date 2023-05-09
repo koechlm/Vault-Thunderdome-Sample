@@ -23,7 +23,7 @@ using Thunderdome.Model;
 using Thunderdome.Util;
 using File = Autodesk.Connectivity.WebServices.File;
 
-[assembly: ApiVersion("16.0")]
+[assembly: ApiVersion("17.0")]
 [assembly: ExtensionId("2AAE56F1-3E44-4B69-8AF0-15566D7A2E49")]
 
 namespace Thunderdome

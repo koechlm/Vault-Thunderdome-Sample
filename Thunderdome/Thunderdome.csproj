@@ -69,35 +69,35 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Autodesk.Connectivity.Explorer.Extensibility">
-      <HintPath>..\..\..\..\OneDrive - Autodesk\Vault Customization\SDK References 2023\Autodesk Vault 2023 SDK\bin\x64\Autodesk.Connectivity.Explorer.Extensibility.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files\Autodesk\Autodesk Vault 2024 SDK\bin\x64\Autodesk.Connectivity.Explorer.Extensibility.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Autodesk.Connectivity.Explorer.ExtensibilityTools">
-      <HintPath>..\..\..\..\OneDrive - Autodesk\Vault Customization\SDK References 2023\Autodesk Vault 2023 SDK\bin\x64\Autodesk.Connectivity.Explorer.ExtensibilityTools.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files\Autodesk\Autodesk Vault 2024 SDK\bin\x64\Autodesk.Connectivity.Explorer.ExtensibilityTools.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Autodesk.Connectivity.Extensibility.Framework">
-      <HintPath>..\..\..\..\OneDrive - Autodesk\Vault Customization\SDK References 2023\Autodesk Vault 2023 SDK\bin\x64\Autodesk.Connectivity.Extensibility.Framework.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files\Autodesk\Autodesk Vault 2024 SDK\bin\x64\Autodesk.Connectivity.Extensibility.Framework.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Autodesk.Connectivity.JobProcessor.Extensibility">
-      <HintPath>..\..\..\..\OneDrive - Autodesk\Vault Customization\SDK References 2023\Autodesk Vault 2023 SDK\bin\x64\Autodesk.Connectivity.JobProcessor.Extensibility.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files\Autodesk\Autodesk Vault 2024 SDK\bin\x64\Autodesk.Connectivity.JobProcessor.Extensibility.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Autodesk.Connectivity.WebServices">
-      <HintPath>..\..\..\..\OneDrive - Autodesk\Vault Customization\SDK References 2023\Autodesk Vault 2023 SDK\bin\x64\Autodesk.Connectivity.WebServices.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files\Autodesk\Autodesk Vault 2024 SDK\bin\x64\Autodesk.Connectivity.WebServices.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Autodesk.DataManagement.Client.Framework">
-      <HintPath>..\..\..\..\OneDrive - Autodesk\Vault Customization\SDK References 2023\Autodesk Vault 2023 SDK\bin\x64\Autodesk.DataManagement.Client.Framework.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files\Autodesk\Autodesk Vault 2024 SDK\bin\x64\Autodesk.DataManagement.Client.Framework.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Autodesk.DataManagement.Client.Framework.Forms">
-      <HintPath>..\..\..\..\OneDrive - Autodesk\Vault Customization\SDK References 2023\Autodesk Vault 2023 SDK\bin\x64\Autodesk.DataManagement.Client.Framework.Forms.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files\Autodesk\Autodesk Vault 2024 SDK\bin\x64\Autodesk.DataManagement.Client.Framework.Forms.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Autodesk.DataManagement.Client.Framework.Vault">
-      <HintPath>..\..\..\..\OneDrive - Autodesk\Vault Customization\SDK References 2023\Autodesk Vault 2023 SDK\bin\x64\Autodesk.DataManagement.Client.Framework.Vault.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files\Autodesk\Autodesk Vault 2024 SDK\bin\x64\Autodesk.DataManagement.Client.Framework.Vault.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="ICSharpCode.SharpZipLib, Version=0.85.4.369, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
