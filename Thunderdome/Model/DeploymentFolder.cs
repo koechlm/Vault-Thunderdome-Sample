@@ -49,23 +49,32 @@ namespace Thunderdome.Model
 
             foreach (string file in DirectoryUtil.GetFilesOrEmpty(currentPath))
             {
-                string subPath = System.IO.Path.GetDirectoryName(file);
-                subPath = subPath.Remove(0, Path.Length);
-                subPath = subPath.Replace('\\', '/');
-                subPath = subPath.TrimStart('/');
-
-                string zipPath;
-
-                if (subPath.Length > 0)
-                    zipPath = key + "/" + folderName + "/" + subPath + "/" + System.IO.Path.GetFileName(file);
+                if (file.EndsWith(".v"))
+                {
+                    continue;
+                }
                 else
-                    zipPath = key + "/" + folderName + "/" + System.IO.Path.GetFileName(file);
+                {
+                    string subPath = System.IO.Path.GetDirectoryName(file);
+                    subPath = subPath.Remove(0, Path.Length);
+                    subPath = subPath.Replace('\\', '/');
+                    subPath = subPath.TrimStart('/');
 
-                zip.Add(new FileDataSource(file), zipPath);
+                    string zipPath;
+
+                    if (subPath.Length > 0)
+                        zipPath = key + "/" + folderName + "/" + subPath + "/" + System.IO.Path.GetFileName(file);
+                    else
+                        zipPath = key + "/" + folderName + "/" + System.IO.Path.GetFileName(file);
+
+                    zip.Add(new FileDataSource(file), zipPath);
+                }
+
             }
 
             foreach (string folder in DirectoryUtil.GetDirectoriesOrEmpty(currentPath))
-                ZipFolder(zip, key, folder);
+                if (!folder.Contains("_V"))
+                    ZipFolder(zip, key, folder);
         }
     }
 }
