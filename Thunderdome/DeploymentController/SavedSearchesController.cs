@@ -57,13 +57,26 @@ namespace Thunderdome.DeploymentController
                 string serverName = AutodeskPathUtil.GetServerSettingsFolderName(Connection);
                 string localSettingFolder = AutodeskPathUtil.GetCurrentVaultCommonFolder(Connection, serverName, VaultName);
                 string searchesPath = Path.Combine(localSettingFolder, FolderSearches);
+                string filename = null;
                 foreach (string searchPath in DirectoryUtil.GetFilesOrEmpty(folder))
                 {
-                    string filename = Path.GetFileName(searchPath);
+                    filename = Path.GetFileName(searchPath);
                     utilSettings.FileMoveOperations.Add(new FileMove
                     {
                         From = searchPath,
                         To = Path.Combine(searchesPath, filename)
+                    });
+                }
+                //add the group settings file
+                string searchGroupPath = Path.Combine(localSettingFolder, (FolderSearches + '\\' + SearchesGroups));
+                string grpfolder = Path.Combine(folder, "Groups");
+                foreach (string searchPath in DirectoryUtil.GetFilesOrEmpty(grpfolder))
+                {
+                    filename = Path.GetFileName(searchPath);
+                    utilSettings.FileMoveOperations.Add(new FileMove
+                    {
+                        From = searchPath,
+                        To = Path.Combine(searchGroupPath, filename)
                     });
                 }
             }
