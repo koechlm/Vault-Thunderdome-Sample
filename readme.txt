@@ -55,6 +55,7 @@ Thunderdome is open source. You are expected to build your individual applicatio
 
 RELEASE NOTES:
 ---------------------------------
+2024.1.0: exclude _V folders and *.v files
 2024.0.0: updated for 2024 compatibility
 2023.0: updated for 2023
 2022.1: Support for Saved Searches Groups added; Minor updates on the Tools->Thunderdome Pullout-Menu

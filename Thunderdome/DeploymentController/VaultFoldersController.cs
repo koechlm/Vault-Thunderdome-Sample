@@ -82,6 +82,16 @@ namespace Thunderdome.DeploymentController
             IO.Directory.CreateDirectory(tmpLocalFolder);
 
             var downloadResults = await Util.VaultUtil.DownloadFolderAsync(Connection, folder, true, false, tmpLocalFolder);
+            
+            //delete _V folders from temp location; avoid to re-destribute _V folders
+            string[] _VFolders = IO.Directory.GetDirectories(tmpLocalFolder, "_V", IO.SearchOption.AllDirectories);
+            if (_VFolders.Length > 0)
+            {
+                foreach (string _VFldr in _VFolders)
+                {
+                    FileUtil.DeleteDirectory(_VFldr, false);
+                }
+            }
             FileUtil.RemoveReadOnly(downloadResults.FileResults.Select(f => f.LocalPath.FullPath));
 
             var configFilePath = IO.Path.Combine(tmpLocalFolder, ConfigNames[0]);
