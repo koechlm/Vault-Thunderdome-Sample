@@ -1,12 +1,10 @@
 ﻿using Autodesk.Connectivity.Explorer.Extensibility;
 using Autodesk.Connectivity.Extensibility.Framework;
-using Autodesk.DataManagement.Client.Framework;
 using Autodesk.DataManagement.Client.Framework.Currency;
 using Autodesk.DataManagement.Client.Framework.Vault.Currency.Connections;
 using Autodesk.DataManagement.Client.Framework.Vault.Currency.Entities;
 using Autodesk.DataManagement.Client.Framework.Vault.Results;
 using Autodesk.DataManagement.Client.Framework.Vault.Settings;
-using Autodesk.DataManagement.Client.Framework.Forms;
 using ICSharpCode.SharpZipLib.Zip;
 using System;
 using System.Collections.Generic;
@@ -23,7 +21,7 @@ using Thunderdome.Model;
 using Thunderdome.Util;
 using File = Autodesk.Connectivity.WebServices.File;
 
-[assembly: ApiVersion("17.0")]
+[assembly: ApiVersion("18.0")]
 [assembly: ExtensionId("2AAE56F1-3E44-4B69-8AF0-15566D7A2E49")]
 
 namespace Thunderdome
